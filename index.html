@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skynox</title>
+    <link rel="stylesheet" href="Css/style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+      integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="column">
+        <div class="carousel">
+          <button
+            onclick="plusSlides(-1)"
+            class="carousel-button carousel-btn-left"
+          >
+            <img src="images/left.svg" alt="" />
+          </button>
+          <div class="carousel-container">
+            <ul class="carousel-slider">
+              <li class="carousel-slide img-Slides">
+                <img class="carousel-image" src="/images/image-1.jpg" alt="" />
+              </li>
+              <li class="carousel-slide img-Slides">
+                <img class="carousel-image" src="/images/image-2.jpg" alt="" />
+              </li>
+              <li class="carousel-slide img-Slides">
+                <img class="carousel-image" src="/images/image-3.jpg" alt="" />
+              </li>
+              <li class="carousel-slide img-Slides">
+                <img class="carousel-image" src="/images/image-4.jpg" alt="" />
+              </li>
+              <li class="carousel-slide img-Slides">
+                <img class="carousel-image" src="/images/image-5.jpg" alt="" />
+              </li>
+            </ul>
+          </div>
+          <button
+            onclick="plusSlides(-1)"
+            class="carousel-button carousel-btn-right"
+          >
+            <img src="images/right.svg" alt="" />
+          </button>
+
+          <div class="slide-wrapper">
+            <div class="slider">
+              <img class="thumbnail active" src="images/image-1.jpg" />
+              <img class="thumbnail" src="images/image-2.jpg" />
+              <img class="thumbnail" src="images/image-3.jpg" />
+              <img class="thumbnail" src="images/image-4.jpg" />
+              <img class="thumbnail" src="images/image-5.jpg" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <h1>Upholstered Sofa</h1>
+        <p>Kyara upholstered Standard Bed</p>
+        <p class="line">by ZipCode Design</p>
+        <p>
+          Anchor your living room in sophisticated style and impeccable comfort
+          with a single addition. Perfectly balncing wood accents with fabric
+          upholstery.
+        </p>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <p><span class="checked">(5.0)</span> review based on 250</p>
+        <p class="review"><u>Submit Review</u></p>
+        <h1>$567</h1>
+        <p>
+          <i class="far fa-clock"></i>
+          Dispatched in 7 working days
+        </p>
+        <button class="btn1">ADD TO CART</button>
+        <button class="btn2">ADD TO WISHLIST</button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="card">
+        <span class="fas fa-shield-alt"
+          ><b class="card-text">Secure Payment</b></span
+        >
+        <p>Dont worry your money is in secure places</p>
+      </div>
+      <div class="card">
+        <span class="fas fa-truck"
+          ><b class="card-text">Fast & free delivery</b></span
+        >
+        <p>Home delivery $15 For free deliver order over $250</p>
+      </div>
+      <div class="card">
+        <span class="fas fa-exchange-alt"
+          ><b class="card-text">Return Policy</b></span
+        >
+        <p>No hassel return policy</p>
+      </div>
+    </div>
+
+    <script>
+      let slideIndex = 1;
+      showSlides(slideIndex);
+
+      function plusSlides(n) {
+        showSlides((slideIndex += n));
+      }
+
+      function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("img-Slides");
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slides[slideIndex - 1].style.display = "block";
+      }
+    </script>
+  </body>
+</html>

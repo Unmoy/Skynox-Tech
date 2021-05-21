@@ -1,0 +1,154 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.column {
+  width: 500px;
+  height: 550px;
+  padding: 10px;
+}
+.carousel {
+  position: relative;
+  height: 450px;
+  width: 450px;
+  margin: 0 auto;
+}
+.img-Slides {
+  display: none;
+}
+.carousel-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.carousel-container {
+  height: 100%;
+  position: relative;
+}
+.carousel-slider {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.carousel-slide {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #ffffff;
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 38px;
+  width: 38px;
+  transition: 0.3s;
+  opacity: 0.8;
+}
+.carousel-button:hover {
+  opacity: 1;
+  width: 42px;
+  height: 42px;
+}
+.carousel-button img {
+  width: 12px;
+}
+.carousel-btn-left {
+  left: 15px;
+  z-index: 50;
+}
+.carousel-btn-right {
+  right: 15px;
+}
+.thumbnail {
+  object-fit: cover;
+  max-width: 80px;
+  max-height: 73px;
+  cursor: pointer;
+  margin: 5px;
+  border: 2px solid black;
+}
+.slide-wrapper {
+  width: 100%;
+  display: flex;
+  min-height: 100px;
+  justify-content: center;
+}
+.line {
+  line-height: 0;
+}
+
+.slider {
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+.checked {
+  color: #01d19c;
+  cursor: pointer;
+}
+.review {
+  cursor: pointer;
+}
+.btn1 {
+  background-color: black;
+  color: #ffffff;
+  padding: 10px 20px 10px 20px;
+  border: 1px solid black;
+}
+.btn2 {
+  background: transparent;
+  color: black;
+  padding: 10px 20px 10px 20px;
+  border: 1px solid black;
+}
+.row {
+  display: flex;
+  height: 200px;
+  justify-content: center;
+}
+.card {
+  height: 50%;
+  width: 250px;
+  margin: 35px;
+  padding: 10px;
+}
+.card p {
+  color: grey;
+}
+.card-text {
+  margin-left: 5px;
+}
+@media only screen and (max-width: 425px) {
+  .carousel {
+    width: 100%;
+  }
+  .carousel-container {
+    width: 100%;
+  }
+  .column {
+    width: 100%;
+  }
+  .slide-wrapper {
+    width: 100%;
+  }
+  .btn2 {
+    margin-top: 10px;
+  }
+  .row {
+    flex-direction: column;
+    margin-top: 150px;
+    margin-bottom: 10px;
+  }
+}
